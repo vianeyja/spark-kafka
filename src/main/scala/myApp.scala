@@ -11,8 +11,6 @@ object myApp extends App {
   val topic = "vikramtopic"
   val brokers = "wn0-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn1-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn2-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn3-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092"
 
-  val conf = new SparkConf().setAppName("consumer")
-  val sc = new SparkContext(conf)
 
   val props = new Properties()
   props.put("bootstrap.servers", brokers)
@@ -37,4 +35,11 @@ object myApp extends App {
 
   System.out.println("sent per second: " + events * 1000 / (System.currentTimeMillis() - t))
   producer.close()
+
+  def main (): Unit = {
+    val conf = new SparkConf().setAppName("WASBIOTest")
+    val sc = new SparkContext(conf)
+
+  }
+
 }

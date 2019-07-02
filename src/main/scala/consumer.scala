@@ -24,6 +24,11 @@ class consumer(val brokers: String,
       executor.shutdown();
   }
 
+  def main (): Unit = {
+    val conf = new SparkConf().setAppName("WASBIOTest")
+    val sc = new SparkContext(conf)
+
+  }
   def createConsumerConfig(brokers: String, groupId: String): Properties = {
     val props = new Properties()
     props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers)
