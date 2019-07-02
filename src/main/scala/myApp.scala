@@ -1,14 +1,11 @@
 import java.util.{Date, Properties}
-import org.apache.spark.SparkConf
-import org.apache.spark.SparkContext
+
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerRecord
 
 
 object myApp extends App {
 
-  val conf = new SparkConf().setAppName("myApp")
-  val sc = new SparkContext(conf)
 
   val events = 10
   val topic = "vikramtopic"

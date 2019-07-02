@@ -3,7 +3,6 @@ import java.util.{Collections, Properties}
 
 
 import org.apache.kafka.clients.consumer.{ConsumerConfig, KafkaConsumer}
-import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.JavaConversions._
 
@@ -11,8 +10,7 @@ class consumer(val brokers: String,
                            val groupId: String,
                            val topic: String){
 
-  val conf = new SparkConf().setAppName("consumer")
-  val sc = new SparkContext(conf)
+
 
   val props = createConsumerConfig(brokers, groupId)
   val consumer = new KafkaConsumer[String, String](props)
