@@ -56,7 +56,7 @@ class consumer(val brokers: String,
 
 object consumer extends App {
 
-  def main(args: Array[String]): Unit = {
+  def main (): Unit = {
     val conf = new SparkConf().setAppName("WASBIOTest")
     val sc = new SparkContext(conf)
     println("Hello, spark!")
