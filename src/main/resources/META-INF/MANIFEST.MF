@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Class-Path: scala-parser-combinators_2.11-1.0.4.jar jackson-core-asl-1
+ .9.13.jar slf4j-api-1.7.16.jar spark-catalyst_2.11-2.3.2.jar flatbuff
+ ers-1.2.0-3f79e055.jar spark-unsafe_2.11-2.3.2.jar protobuf-java-2.5.
+ 0.jar lz4-1.3.0.jar netty-3.9.9.Final.jar jackson-databind-2.6.7.1.ja
+ r kafka-clients-0.10.0.1.jar arrow-vector-0.8.0.jar parquet-common-1.
+ 8.3.jar aircompressor-0.8.jar orc-mapreduce-1.4.4-nohive.jar objenesi
+ s-2.1.jar breeze_2.11-0.13.2.jar arrow-memory-0.8.0.jar macro-compat_
+ 2.11-1.1.1.jar parquet-column-1.8.3.jar xbean-asm5-shaded-4.4.jar arp
+ ack_combined_all-0.1.jar log4j-1.2.17.jar jline-0.9.94.jar unused-1.0
+ .0.jar jsr305-1.3.9.jar spark-sql_2.11-2.3.2.jar spark-sketch_2.11-2.
+ 3.2.jar jopt-simple-4.9.jar scala-reflect-2.11.8.jar commons-compiler
+ -3.0.8.jar metrics-core-2.2.0.jar jackson-core-2.6.7.jar kryo-shaded-
+ 3.0.3.jar scala-library-2.11.8.jar spire_2.11-0.13.0.jar spark-graphx
+ _2.11-2.3.2.jar joda-time-2.9.9.jar machinist_2.11-0.6.1.jar shapeles
+ s_2.11-2.3.2.jar minlog-1.3.0.jar jackson-mapper-asl-1.9.13.jar spire
+ -macros_2.11-0.13.0.jar zkclient-0.9.jar arrow-format-0.8.0.jar breez
+ e-macros_2.11-0.13.2.jar hppc-0.7.2.jar janino-3.0.8.jar opencsv-2.3.
+ jar jtransforms-2.4.0.jar spark-streaming-kafka-0-10_2.11-2.3.0.jar p
+ arquet-format-2.3.1.jar snappy-java-1.1.2.6.jar parquet-hadoop-1.8.3.
+ jar parquet-encoding-1.8.3.jar univocity-parsers-2.5.9.jar antlr4-run
+ time-4.7.jar commons-lang-2.6.jar jackson-annotations-2.6.7.jar chill
+ -java-0.8.4.jar commons-math3-3.4.1.jar zookeeper-3.4.8.jar commons-c
+ odec-1.12.jar spark-tags_2.11-2.3.0.jar chill_2.11-0.8.4.jar spark-ml
+ lib-local_2.11-2.3.2.jar parquet-jackson-1.8.3.jar slf4j-log4j12-1.7.
+ 16.jar orc-core-1.4.4-nohive.jar core-1.1.2.jar kafka_2.11-0.10.1.0.j
+ ar spark-mllib_2.11-2.3.2.jar
+Main-Class: myApp
+
