@@ -2,7 +2,7 @@ import java.util.{Date, Properties}
 
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerRecord
-
+import org.apache.spark.{SparkConf, SparkContext}
 
 object myApp extends App {
 
@@ -10,6 +10,9 @@ object myApp extends App {
   val events = 10
   val topic = "vikramtopic"
   val brokers = "wn0-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn1-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn2-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn3-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092"
+
+  val conf = new SparkConf().setAppName("consumer")
+  val sc = new SparkContext(conf)
 
   val props = new Properties()
   props.put("bootstrap.servers", brokers)

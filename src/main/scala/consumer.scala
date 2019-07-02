@@ -1,6 +1,6 @@
 import java.util.concurrent._
 import java.util.{Collections, Properties}
-
+import org.apache.spark.{SparkConf, SparkContext}
 
 import org.apache.kafka.clients.consumer.{ConsumerConfig, KafkaConsumer}
 
@@ -10,7 +10,8 @@ class consumer(val brokers: String,
                            val groupId: String,
                            val topic: String){
 
-
+  val conf = new SparkConf().setAppName("consumer")
+  val sc = new SparkContext(conf)
 
   val props = createConsumerConfig(brokers, groupId)
   val consumer = new KafkaConsumer[String, String](props)
