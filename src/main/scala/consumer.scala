@@ -10,6 +10,7 @@ class consumer(val brokers: String,
                            val groupId: String,
                            val topic: String){
 
+
   val conf = new SparkConf().setAppName("consumer")
   val sc = new SparkContext(conf)
 
@@ -24,11 +25,6 @@ class consumer(val brokers: String,
       executor.shutdown();
   }
 
-  def main (): Unit = {
-    val conf = new SparkConf().setAppName("WASBIOTest")
-    val sc = new SparkContext(conf)
-
-  }
   def createConsumerConfig(brokers: String, groupId: String): Properties = {
     val props = new Properties()
     props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers)
@@ -64,4 +60,10 @@ object consumer extends App {
   val topic= "vikramtopic"
   val example = new consumer(brokers, group, topic)
   example.run()
+
+  def main (): Unit = {
+    val conf = new SparkConf().setAppName("WASBIOTest")
+    val sc = new SparkContext(conf)
+
+  }
 }
