@@ -55,15 +55,17 @@ class consumer(val brokers: String,
 }
 
 object consumer extends App {
-  val brokers = "wn0-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn1-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn2-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn3-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092"
-  val group = "group1"
-  val topic= "vikramtopic"
-  val example = new consumer(brokers, group, topic)
-  example.run()
 
   def main (): Unit = {
     val conf = new SparkConf().setAppName("WASBIOTest")
     val sc = new SparkContext(conf)
 
   }
+  
+  val brokers = "wn0-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn1-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn2-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092,wn3-hdikaf.ugupek1mbeiupbtqtqt0x5ruug.gx.internal.cloudapp.net:9092"
+  val group = "group1"
+  val topic= "vikramtopic"
+  val example = new consumer(brokers, group, topic)
+  example.run()
+
 }
